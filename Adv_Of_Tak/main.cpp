@@ -1,21 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <SFML/Graphics.hpp>
+#include <vector>
 
 using namespace sf;
+using namespace std;
 
 int main()
 {
 	RenderWindow window(sf::VideoMode(500,500),"WINDOW");
 	window.setFramerateLimit(60);
 
-	IntRect txSq(0, 0, 319/3, 424/4);
-	// 319 x 424
-	Texture tx;
-	tx.loadFromFile("Textures/dragonFrames.png");
+	vector<Texture> txVector;
 
-	Sprite sp(tx,txSq);
-	sp.setScale(3.f,3.f);
+	Texture tx;
+	char name[50];
+
+	for(int i = 32; i < 36; ++i)
+	{
+		sprintf(name,"Textures/cookie0020x2/cookie0020x2_00%d.png",i);
+		tx.loadFromFile(name);
+		txVector.push_back(tx);
+	}
+
+	Sprite sp;
 
 	Clock clock;
+
+	size_t keyFrameTime = 0;
 
 	while (window.isOpen())
 	{
@@ -37,17 +48,11 @@ int main()
 			}
 		}
 
-		if(clock.getElapsedTime().asMilliseconds() >=  0.3f)
+		if(clock.getElapsedTime().asSeconds() > 0.2f)
 		{
-			if(txSq.left >= 318 - 106)
-			{
-				txSq.left = 0;
-			}
-			else
-			{
-				txSq.left += 319 / 3;
-			}
-			sp.setTextureRect(txSq);
+			sp.setTexture(txVector.data()[keyFrameTime % txVector.size()]);
+
+			keyFrameTime++;
 			clock.restart();
 		}
 
