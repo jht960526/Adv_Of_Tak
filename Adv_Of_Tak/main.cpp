@@ -5,26 +5,54 @@ using namespace sf;
 int main()
 {
 	RenderWindow window(sf::VideoMode(500,500),"WINDOW");
+	window.setFramerateLimit(60);
 
-	// 절대 사이즈가 없다.
-	// Scaling
-	// texture의 사이즈를 그대로 가져오기 때문에
-	// 이를 배수를 곱해서 줄이거나 늘릴 수 있음
-	Sprite sp;
+	IntRect txSq(0, 0, 319/3, 424/4);
+	// 319 x 424
 	Texture tx;
-	tx.loadFromFile("Textures/미네랄2.jpg");
+	tx.loadFromFile("Textures/dragonFrames.png");
 
-	sp.setScale(0.5f,0.5f);
-	sp.setTexture(tx);
-	sp.setOrigin(tx.getSize().x/2.f,tx.getSize().y/2.f);
-	sp.setPosition(250.f,250.f);
+	Sprite sp(tx,txSq);
+	sp.setScale(3.f,3.f);
+
+	Clock clock;
 
 	while (window.isOpen())
 	{
 		window.clear();
 
+		Event e;
+		while (window.pollEvent(e))
+		{
+			switch (e.type)
+			{
+			case Event::Closed:
+			{
+				// 윈도우를 종료한다.
+				window.close();
+				break;
+			}
+			default:
+				break;
+			}
+		}
+
+		if(clock.getElapsedTime().asMilliseconds() >=  0.3f)
+		{
+			if(txSq.left >= 318 - 106)
+			{
+				txSq.left = 0;
+			}
+			else
+			{
+				txSq.left += 319 / 3;
+			}
+			sp.setTextureRect(txSq);
+			clock.restart();
+		}
+
 		window.draw(sp);
-	
 		window.display();
+
 	}
 }
