@@ -48,6 +48,18 @@ void Engine::Input()
 		}
 	}
 
+	// KeyBoardInput
+	if(Keyboard::isKeyPressed(Keyboard::Escape))
+	{
+		window->close();
+	}
+
+	else if(Keyboard::isKeyPressed(Keyboard::A))
+	{
+		cout << "Pressed Akey !!\n";
+	}
+
+	// Mouse Input
 	if(Mouse::isButtonPressed(Mouse::Left))
 	{
 		window->setTitle("Left Click");
