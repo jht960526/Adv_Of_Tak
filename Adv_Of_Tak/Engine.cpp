@@ -43,31 +43,26 @@ void Engine::Input()
 			break;
 		}
 
-		case Event::MouseButtonPressed:
-		{
-			window->setTitle("Click");
-			break;
-		}
 		default:
 			break;
 		}
+	}
 
-		/*if(Mouse::isButtonPressed(Mouse::Left))
-		{
-			window->setTitle("Left Click");
-		}
+	if(Mouse::isButtonPressed(Mouse::Left))
+	{
+		window->setTitle("Left Click");
+	}
 
-		if(Mouse::isButtonPressed(Mouse::Right))
-		{
-			window->setTitle("Right Click");
-		}*/
+	else if(Mouse::isButtonPressed(Mouse::Right))
+	{
+		window->setTitle("Right Click");
 	}
 }
 
 void Engine::Update()
 {
 	deltaTime = timer.getElapsedTime().asSeconds();
-	//window->setTitle("window");
+	window->setTitle("window");
 	Input();
 }
 
