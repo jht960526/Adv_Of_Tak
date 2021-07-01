@@ -43,6 +43,19 @@ void Engine::Input()
 			break;
 		}
 
+		case Event::KeyPressed:
+		{
+			switch (evt.key.code)
+			{
+			case Keyboard::A:
+			{
+				cout << "Pressed Akey !!\n";
+				break;
+			}
+			default:
+				break;
+			}
+		}
 		default:
 			break;
 		}
@@ -52,11 +65,6 @@ void Engine::Input()
 	if(Keyboard::isKeyPressed(Keyboard::Escape))
 	{
 		window->close();
-	}
-
-	else if(Keyboard::isKeyPressed(Keyboard::A))
-	{
-		cout << "Pressed Akey !!\n";
 	}
 
 	// Mouse Input
