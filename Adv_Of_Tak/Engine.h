@@ -19,7 +19,7 @@ private: /* 멤버 변수 */
 	Clock timer;
 	float deltaTime = 0.f;
 
-	AnimationObject* obj = nullptr;
+	vector<AnimationObject*> obj;
 
 private: /* 메소드 */
 
