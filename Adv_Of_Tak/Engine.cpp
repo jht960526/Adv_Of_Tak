@@ -57,12 +57,16 @@ void Engine::Input()
 	{
 		window->setTitle("Right Click");
 	}
+
+	else
+	{
+		window->setTitle("window");
+	}
 }
 
 void Engine::Update()
 {
 	deltaTime = timer.getElapsedTime().asSeconds();
-	window->setTitle("window");
 	Input();
 }
 
