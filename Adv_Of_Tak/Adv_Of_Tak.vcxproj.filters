@@ -25,6 +25,15 @@
     <Filter Include="소스 파일\01_AnimationObject">
       <UniqueIdentifier>{a9762db0-b2f5-4adb-9670-3cf84bab2648}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\NewFilter1">
+      <UniqueIdentifier>{7027745d-e7a5-4916-85a5-8b12eb2a1b0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01_Object\01_MainCharacter">
+      <UniqueIdentifier>{f40f95a6-9b0c-4a55-9aab-d024653be62d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01_Object\03_ProfObject1">
+      <UniqueIdentifier>{dcf51e33-7f24-48c0-8950-cf2c8ef1da1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,14 +45,20 @@
     <ClCompile Include="Object.cpp">
       <Filter>소스 파일\01_Object\00_Object</Filter>
     </ClCompile>
-    <ClCompile Include="AnimationObject.cpp">
+    <ClCompile Include="Scene.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ProfObject1.cpp">
+    <ClCompile Include="Stage1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="MainCharacter.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\01_Object\01_MainCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationObject.cpp">
+      <Filter>소스 파일\01_AnimationObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfObject1.cpp">
+      <Filter>소스 파일\01_Object\03_ProfObject1</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,14 +71,20 @@
     <ClInclude Include="Object.h">
       <Filter>소스 파일\01_Object\00_Object</Filter>
     </ClInclude>
-    <ClInclude Include="AnimationObject.h">
+    <ClInclude Include="Scene.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ProfObject1.h">
+    <ClInclude Include="Stage1.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="MainCharacter.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\01_Object\01_MainCharacter</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationObject.h">
+      <Filter>소스 파일\01_AnimationObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfObject1.h">
+      <Filter>소스 파일\01_Object\03_ProfObject1</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

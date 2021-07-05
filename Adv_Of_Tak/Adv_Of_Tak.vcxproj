@@ -148,6 +148,8 @@
     <ClCompile Include="MainCharacter.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ProfObject1.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Stage1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationObject.h" />
@@ -156,6 +158,8 @@
     <ClInclude Include="MainCharacter.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ProfObject1.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Stage1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

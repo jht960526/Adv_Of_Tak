@@ -1,7 +1,6 @@
 #include "framework.h"
 #include "Engine.h"
-#include "AnimationObject.h"
-#include "ProfObject1.h"
+#include "Stage1.h"
 #include "MainCharacter.h"
 
 Engine::Engine()
@@ -23,8 +22,8 @@ void Engine::Init()
 	icon.loadFromFile("Textures/미네랄2.jpg");
 	window->setIcon(icon.getSize().x,icon.getSize().y,icon.getPixelsPtr());
 
-	obj.push_back(new ProfObject1);
-	obj.push_back(new MainCharacter);
+	this->scenes.push(new Scene);
+
 }
 
 void Engine::Destroy()
@@ -54,9 +53,16 @@ void Engine::Input()
 			{
 			case Keyboard::A:
 			{
-				cout << "Pressed Akey !!\n";
+				this->scenes.push(new Stage1);
+				cout << "Stage1 !!\n";
 				break;
 			}
+			case Keyboard::Q:
+			{
+				scenes.top()->EndScene();
+				break;
+			}
+			
 			default:
 				break;
 			}
@@ -93,14 +99,24 @@ void Engine::Update()
 {
 	
 	deltaTime = timer.getElapsedTime().asSeconds();
-
-	for(auto& o : obj)
-	{
-		o->Update(deltaTime);
-	}
-
 	timer.restart();
 	Input();
+	if(!scenes.empty())
+	{
+		scenes.top()->Update(deltaTime);
+
+		if(this->scenes.top()->GetQuit())
+		{
+			//현재 실행중인 씬 종료한다.
+			delete this->scenes.top();
+			this->scenes.pop();
+			cout << "Pop Scene\n";
+		}
+	}
+	else
+	{
+		window->close();
+	}
 }
 
 void Engine::Render()
@@ -109,9 +125,9 @@ void Engine::Render()
 	{
 		window->clear();
 		Update();
-		for(auto& o : obj)
+		if(!scenes.empty())
 		{
-			window->draw(*o);
+			scenes.top()->Render(window);
 		}
 		window->display();
 	}

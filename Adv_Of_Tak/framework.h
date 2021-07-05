@@ -12,5 +12,7 @@ using namespace sf;
 #include <iostream>
 #include <map>
 #include <vector>
-
+#include <stack>
+#include <random>
+#include <typeinfo>
 using namespace std;
