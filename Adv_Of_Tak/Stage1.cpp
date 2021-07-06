@@ -23,7 +23,7 @@ void Stage1::Init()
 
 void Stage1::Update(const float& deltaTime)
 {
-	Scene:Update(deltaTime);
+	Scene::Update(deltaTime);
 }
 
 void Stage1::Render(RenderWindow* window)
