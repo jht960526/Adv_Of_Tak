@@ -16,7 +16,7 @@ void ProfObject1::Init()
 
 	char filePath[50];
 
-	for(int i = 1; i < 5; ++i)
+	for(int i = 1; i < 6; ++i)
 	{
 		sprintf(filePath,"Textures/Naruto/kakashi_idle%d.png",i);
 

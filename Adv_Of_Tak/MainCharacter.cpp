@@ -23,7 +23,7 @@ void MainCharacter::Init()
 		this->vAnimation.push_back(tx);
 	}
 
-	setPosition(Vector2f(270.f,0.f));
+	setPosition(Vector2f(100.f,300.f));
 }
 
 void MainCharacter::Destroy()

@@ -148,6 +148,7 @@
     <ClCompile Include="MainCharacter.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ProfObject1.cpp" />
+    <ClCompile Include="ProfObject2.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Stage1.cpp" />
   </ItemGroup>
@@ -158,6 +159,7 @@
     <ClInclude Include="MainCharacter.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ProfObject1.h" />
+    <ClInclude Include="ProfObject2.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Stage1.h" />
   </ItemGroup>

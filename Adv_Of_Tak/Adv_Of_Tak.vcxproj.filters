@@ -25,13 +25,22 @@
     <Filter Include="소스 파일\01_AnimationObject">
       <UniqueIdentifier>{a9762db0-b2f5-4adb-9670-3cf84bab2648}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\NewFilter1">
-      <UniqueIdentifier>{7027745d-e7a5-4916-85a5-8b12eb2a1b0e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\01_Object\01_MainCharacter">
       <UniqueIdentifier>{f40f95a6-9b0c-4a55-9aab-d024653be62d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\01_Object\03_ProfObject1">
+    <Filter Include="소스 파일\Scene">
+      <UniqueIdentifier>{7027745d-e7a5-4916-85a5-8b12eb2a1b0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Scene\SceneObject">
+      <UniqueIdentifier>{a10b0628-c012-4bed-9dc9-06aed2582e68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Scene\Stage">
+      <UniqueIdentifier>{6a0e524b-1f86-4038-9eec-9d44296530cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Scene\Stage\Stage1">
+      <UniqueIdentifier>{99401213-a8ac-4362-847c-b1798ea073bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01_Object\03_ProfObject">
       <UniqueIdentifier>{dcf51e33-7f24-48c0-8950-cf2c8ef1da1b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -45,12 +54,6 @@
     <ClCompile Include="Object.cpp">
       <Filter>소스 파일\01_Object\00_Object</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Stage1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="MainCharacter.cpp">
       <Filter>소스 파일\01_Object\01_MainCharacter</Filter>
     </ClCompile>
@@ -58,7 +61,16 @@
       <Filter>소스 파일\01_AnimationObject</Filter>
     </ClCompile>
     <ClCompile Include="ProfObject1.cpp">
-      <Filter>소스 파일\01_Object\03_ProfObject1</Filter>
+      <Filter>소스 파일\01_Object\03_ProfObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>소스 파일\Scene\SceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1.cpp">
+      <Filter>소스 파일\Scene\Stage\Stage1</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfObject2.cpp">
+      <Filter>소스 파일\01_Object\03_ProfObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,12 +83,6 @@
     <ClInclude Include="Object.h">
       <Filter>소스 파일\01_Object\00_Object</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Stage1.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="MainCharacter.h">
       <Filter>소스 파일\01_Object\01_MainCharacter</Filter>
     </ClInclude>
@@ -84,7 +90,16 @@
       <Filter>소스 파일\01_AnimationObject</Filter>
     </ClInclude>
     <ClInclude Include="ProfObject1.h">
-      <Filter>소스 파일\01_Object\03_ProfObject1</Filter>
+      <Filter>소스 파일\01_Object\03_ProfObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>소스 파일\Scene\SceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1.h">
+      <Filter>소스 파일\Scene\Stage\Stage1</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfObject2.h">
+      <Filter>소스 파일\01_Object\03_ProfObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
