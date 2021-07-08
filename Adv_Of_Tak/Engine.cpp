@@ -1,7 +1,7 @@
 #include "framework.h"
 #include "Engine.h"
 #include "Stage1.h"
-#include "MainCharacter.h"
+#include "Stage2.h"
 
 Engine::Engine()
 {
@@ -55,6 +55,13 @@ void Engine::Input()
 			{
 				this->scenes.push(new Stage1);
 				cout << "Stage1 !!\n";
+				break;
+			}
+
+			case Keyboard::S:
+			{
+				this->scenes.push(new Stage2);
+				cout << "Stage2 !!\n";
 				break;
 			}
 			case Keyboard::Q:

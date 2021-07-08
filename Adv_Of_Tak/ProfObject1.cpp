@@ -26,6 +26,7 @@ void ProfObject1::Init()
 	}
 	
 	setPosition(Vector2f(100.f,100.f));
+	cout << "持失 朝朝獣" << endl;
 }
 
 void ProfObject1::Destroy()

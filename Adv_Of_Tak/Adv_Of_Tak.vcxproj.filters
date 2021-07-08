@@ -43,6 +43,9 @@
     <Filter Include="소스 파일\01_Object\03_ProfObject">
       <UniqueIdentifier>{dcf51e33-7f24-48c0-8950-cf2c8ef1da1b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Scene\Stage\Stage2">
+      <UniqueIdentifier>{2c38ef0f-8fb6-49f3-a3fa-8b77807bcfa3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -72,6 +75,9 @@
     <ClCompile Include="ProfObject2.cpp">
       <Filter>소스 파일\01_Object\03_ProfObject</Filter>
     </ClCompile>
+    <ClCompile Include="Stage2.cpp">
+      <Filter>소스 파일\Scene\Stage\Stage2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -100,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="ProfObject2.h">
       <Filter>소스 파일\01_Object\03_ProfObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage2.h">
+      <Filter>소스 파일\Scene\Stage\Stage2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
