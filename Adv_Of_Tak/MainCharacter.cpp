@@ -24,6 +24,7 @@ void MainCharacter::Init()
 	}
 
 	setPosition(Vector2f(100.f,300.f));
+	cout << "생성 나루토" << endl;
 }
 
 void MainCharacter::Destroy()

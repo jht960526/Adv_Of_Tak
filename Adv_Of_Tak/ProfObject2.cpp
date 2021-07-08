@@ -26,12 +26,15 @@ void ProfObject2::Init()
 	}
 	
 	setPosition(Vector2f(100.f,100.f));
+	cout << "생성 오우거" << endl;
 }
 
 void ProfObject2::Destroy()
 {
+	AnimationObject::Destroy();
 }
 
 void ProfObject2::Update(const float& deltaTime)
 {
+	AnimationObject::Update(deltaTime);
 }
