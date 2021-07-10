@@ -2,6 +2,7 @@
 #include "Engine.h"
 #include "Stage1.h"
 #include "Stage2.h"
+#include "Title.h"
 
 Engine::Engine()
 {
@@ -16,13 +17,13 @@ void Engine::Init()
 {
 	// 현재 window 변수는 포인터로 존재한다.
 
-	this->window = new RenderWindow(VideoMode(500,500),"Window");
+	this->window = new RenderWindow(VideoMode(1061,640),"Adventure Of Tak");
 	window->setMouseCursorVisible(true);
 	Image icon;
-	icon.loadFromFile("Textures/미네랄2.jpg");
+	icon.loadFromFile("Textures/MainBackGround/Adventure_Of_Tak_Main.PNG");
 	window->setIcon(icon.getSize().x,icon.getSize().y,icon.getPixelsPtr());
 
-	this->scenes.push(new Scene);
+	this->scenes.push(new Title(&scenes,window));
 
 }
 
@@ -62,6 +63,11 @@ void Engine::Input()
 			{
 				this->scenes.push(new Stage2);
 				cout << "Stage2 !!\n";
+				break;
+			}
+			case Keyboard::E:
+			{
+				scenes.top()->EndScene();
 				break;
 			}
 			case Keyboard::Q:

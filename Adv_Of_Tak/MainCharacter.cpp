@@ -24,7 +24,7 @@ void MainCharacter::Init()
 	}
 
 	setPosition(Vector2f(100.f,300.f));
-	cout << "积己 唱风配" << endl;
+	cout << "积己 唱风配``" << endl;
 }
 
 void MainCharacter::Destroy()

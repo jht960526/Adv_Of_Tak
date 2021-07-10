@@ -7,7 +7,7 @@ class Scene
 {
 public:
 	Scene();
-	Scene(stack<Scene*>* scenes);
+	Scene(stack<Scene*>* scenes,RenderWindow* window);
 	virtual ~Scene();
 
 protected:
@@ -18,6 +18,8 @@ protected:
 
 	stack<Scene*>* scenes;
 	bool quit = false;
+
+	Object* backGround = nullptr;
 
 private:
 

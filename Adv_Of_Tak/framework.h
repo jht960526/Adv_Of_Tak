@@ -15,4 +15,5 @@ using namespace sf;
 #include <stack>
 #include <random>
 #include <typeinfo>
+#include <string.h>
 using namespace std;

@@ -4,7 +4,7 @@ class Stage1 : public Scene
 {
 public:
 	Stage1();
-	Stage1(stack<Scene*>* stage1);
+	Stage1(stack<Scene*>* scense, RenderWindow* window);
 	virtual ~Stage1();
 
 private:

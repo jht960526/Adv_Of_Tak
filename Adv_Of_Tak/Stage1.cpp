@@ -8,7 +8,7 @@ Stage1::Stage1()
 	Init();
 }
 
-Stage1::Stage1(stack<Scene*>* scense) : Scene(scense)
+Stage1::Stage1(stack<Scene*>* scense, RenderWindow* window) : Scene(scense,window)
 {
 	Init();
 }

@@ -46,6 +46,9 @@
     <Filter Include="소스 파일\Scene\Stage\Stage2">
       <UniqueIdentifier>{2c38ef0f-8fb6-49f3-a3fa-8b77807bcfa3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Scene\Tilte">
+      <UniqueIdentifier>{bca5d817-e200-4686-a12d-9575f94aa96f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -78,6 +81,12 @@
     <ClCompile Include="Stage2.cpp">
       <Filter>소스 파일\Scene\Stage\Stage2</Filter>
     </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BackGroundObject.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -109,6 +118,12 @@
     </ClInclude>
     <ClInclude Include="Stage2.h">
       <Filter>소스 파일\Scene\Stage\Stage2</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGroundObject.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@ Scene::Scene()
 	Init();
 }
 
-Scene::Scene(stack<Scene*>* scenes) : scenes(scenes)
+Scene::Scene(stack<Scene*>* scenes, RenderWindow* window)
 {
 	Init();
 }
