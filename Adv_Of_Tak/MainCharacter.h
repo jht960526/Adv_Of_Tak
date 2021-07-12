@@ -28,6 +28,11 @@ private:
 	int state = IDLE;
 
 	map<int, vector<Texture*>> stateAnimation;
+	float frameTime = 0.2f;
+	unsigned int keyFrame = 0;
+	float speed = 10.f;
+
+	int mainCharacterState = IDLE;
 
 private:
 

@@ -43,6 +43,33 @@ void MainCharacter::Destroy()
 void MainCharacter::Update(const float& deltaTime)
 {
 	AnimationObject::Update(deltaTime);
+
+	static float elapsedTime = 0.f;
+	elapsedTime += deltaTime;
+
+	if(Keyboard::isKeyPressed(Keyboard::Up))
+	{
+		mainCharacterState = RUN;
+		move({0.f,-1.f});
+	}
+
+	else if(Keyboard::isKeyPressed(Keyboard::Down))
+	{
+		mainCharacterState = RUN;
+		move({0.f,1.f});
+	}
+
+	else if(Keyboard::isKeyPressed(Keyboard::Right))
+	{
+		mainCharacterState = RUN;
+		move({1.f,0.f});
+	}
+
+	else if(Keyboard::isKeyPressed(Keyboard::Left))
+	{
+		mainCharacterState = RUN;
+		move({-1.f,0.f});
+	}
 }
 
 void MainCharacter::Jump()
