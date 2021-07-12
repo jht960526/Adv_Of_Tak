@@ -22,9 +22,17 @@ void MainCharacter::Init()
 		tx->loadFromFile(filePath);
 		this->vAnimation.push_back(tx);
 	}
-
+	setScale(1.8f,1.8f);
 	setPosition(Vector2f(100.f,300.f));
 	cout << "생성 나루토``" << endl;
+
+	stateAnimation[RUN];
+	stateAnimation[IDLE];
+	stateAnimation[JUMP];
+	stateAnimation[DASH];
+	stateAnimation[DOUBLEJUMP];
+	stateAnimation[SKILL];
+
 }
 
 void MainCharacter::Destroy()
@@ -35,4 +43,21 @@ void MainCharacter::Destroy()
 void MainCharacter::Update(const float& deltaTime)
 {
 	AnimationObject::Update(deltaTime);
+}
+
+void MainCharacter::Jump()
+{
+}
+
+void MainCharacter::MoveUpdate(const float& deltaTime)
+{
+}
+
+void MainCharacter::SetState(const int& state)
+{
+}
+
+int MainCharacter::GetState()
+{
+	return 0;
 }

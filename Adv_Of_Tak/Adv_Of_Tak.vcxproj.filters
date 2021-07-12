@@ -49,6 +49,9 @@
     <Filter Include="소스 파일\Scene\Tilte">
       <UniqueIdentifier>{bca5d817-e200-4686-a12d-9575f94aa96f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\01_Object\04_BackGroundObject">
+      <UniqueIdentifier>{ab1eed77-aae2-4c04-ad2d-32cbfcaf47cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -85,7 +88,7 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BackGroundObject.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\01_Object\04_BackGroundObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -123,7 +126,7 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="BackGroundObject.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\01_Object\04_BackGroundObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

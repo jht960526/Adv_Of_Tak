@@ -24,7 +24,7 @@ void ProfObject1::Init()
 	    tx->loadFromFile(filePath);
 	    this->vAnimation.push_back(tx);
 	}
-	
+	setScale(1.8f,1.8f);
 	setPosition(Vector2f(100.f,100.f));
 	cout << "持失 朝朝獣" << endl;
 }
