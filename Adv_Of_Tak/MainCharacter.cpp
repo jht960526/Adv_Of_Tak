@@ -24,6 +24,22 @@ void MainCharacter::Init()
 		this->idleAnimation.push_back(tx);
 	}
 
+	for(int i = 1; i < 5; ++i)
+	{
+		sprintf(filePath, "Textures/Naruto/narutomoving/naruto_idle_0%d.png",i);
+		tx = new Texture;
+		tx->loadFromFile(filePath);
+		this->rightIdleAnimation.push_back(tx);
+	}
+
+	for(int i = 1; i < 5; ++i)
+	{
+		sprintf(filePath, "Textures/Naruto/narutomoving/naruto_reidle_0%d.png",i);
+		tx = new Texture;
+		tx->loadFromFile(filePath);
+		this->leftIdleAnimation.push_back(tx);
+	}
+
 	for(int i = 2; i < 7; ++i)
 	{
 		sprintf(filePath, "Textures/Naruto/naruto_idle_00%d.png",i);
