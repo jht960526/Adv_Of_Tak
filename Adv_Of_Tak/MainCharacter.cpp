@@ -29,16 +29,44 @@ void MainCharacter::Init()
 		sprintf(filePath, "Textures/Naruto/naruto_idle_00%d.png",i);
 		tx = new Texture;
 		tx->loadFromFile(filePath);
-		this->runAnimation.push_back(tx);
-		//this->vAnimation.push_back(tx);
+		this->rightRunAnimation.push_back(tx);
+	}
+
+	for(int i = 1; i < 7; ++i)
+	{
+		sprintf(filePath, "Textures/Naruto/narutomoving/naruto_rerun_0%d.png",i);
+		tx = new Texture;
+		tx->loadFromFile(filePath);
+		this->leftRunAnimation.push_back(tx);
+	}
+
+	for(int i = 2; i < 7; ++i)
+	{
+		sprintf(filePath, "Textures/Naruto/narutomoving/naruto_reidle_0%d.png",i);
+		tx = new Texture;
+		tx->loadFromFile(filePath);
+		this->leftIdleAnimation.push_back(tx);
 	}
 	
+	// run
 	stateAnimation[RUN] = &runAnimation;
-	//stateAnimation[DASH] = runAnimation;
+	stateAnimation[LEFTRUN] = &leftRunAnimation;
+	stateAnimation[RIGHTRUN] = &rightRunAnimation;
+
+	//stateAnimation[DASH] = &runAnimation;
+
+	// jump
 	stateAnimation[JUMP] = &jumpAnimation;
 	stateAnimation[DOUBLEJUMP] = &doubleAnimation;
-	stateAnimation[SKILL] = &skillAnimation;
 	
+	// skill
+	stateAnimation[SKILL] = &skillAnimation;
+
+	// idle
+	stateAnimation[IDLE] = &idleAnimation;
+	stateAnimation[LEFTIDLE] = &leftIdleAnimation;
+	stateAnimation[RIGHTIDLE] = &rightIdleAnimation;
+
 	setScale(1.8f,1.8f);
 	setPosition(Vector2f(100.f,300.f));
 	cout << "생성 나루토``" << endl;
@@ -53,7 +81,7 @@ void MainCharacter::Destroy()
 
 void MainCharacter::Update(const float& deltaTime)
 {
-	AnimationObject::Update(deltaTime);
+	//AnimationObject::Update(deltaTime);
 
 	static float elapsedTime = 0.f;
 	elapsedTime += deltaTime;
@@ -72,13 +100,13 @@ void MainCharacter::Update(const float& deltaTime)
 
 	else if(Keyboard::isKeyPressed(Keyboard::Right))
 	{
-		mainCharacterState = RUN;
+		mainCharacterState = RIGHTRUN;
 		move({1.f,0.f});
 	}
 
 	else if(Keyboard::isKeyPressed(Keyboard::Left))
 	{
-		mainCharacterState = RUN;
+		mainCharacterState = LEFTRUN;
 		move({-1.f,0.f});
 	}
 	else
@@ -93,11 +121,7 @@ void MainCharacter::Update(const float& deltaTime)
 			if(animation.first == mainCharacterState)
 			{
 				setTexture(*animation.second->data()[keyFrame % animation.second->size()]);
-				oldState = animation.first;
-			}
-			else if(mainCharacterState == IDLE)
-			{
-				setTexture(*stateAnimation[oldState]->data()[1]);
+				
 			}
 		}
 		++keyFrame;
