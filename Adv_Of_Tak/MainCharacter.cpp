@@ -56,12 +56,12 @@ void MainCharacter::Init()
 		this->leftRunAnimation.push_back(tx);
 	}
 
-	for(int i = 2; i < 7; ++i)
+	for(int i = 1; i < 7; ++i)
 	{
-		sprintf(filePath, "Textures/Naruto/narutomoving/naruto_reidle_0%d.png",i);
+		sprintf(filePath, "naruto_jump_0%d.png",i);
 		tx = new Texture;
 		tx->loadFromFile(filePath);
-		this->leftIdleAnimation.push_back(tx);
+		this->jumpAnimation.push_back(tx);
 	}
 	
 	// run
@@ -104,15 +104,16 @@ void MainCharacter::Update(const float& deltaTime)
 
 	if(Keyboard::isKeyPressed(Keyboard::Up))
 	{
-		mainCharacterState = RUN;
-		move({0.f,-1.f});
+		mainCharacterState = JUMP;
+		Jump();
+		cout << "jump" << endl;
 	}
 
-	else if(Keyboard::isKeyPressed(Keyboard::Down))
+	/*else if(Keyboard::isKeyPressed(Keyboard::Down))
 	{
 		mainCharacterState = RUN;
 		move({0.f,1.f});
-	}
+	}*/
 
 	else if(Keyboard::isKeyPressed(Keyboard::Right))
 	{
@@ -125,6 +126,7 @@ void MainCharacter::Update(const float& deltaTime)
 		mainCharacterState = LEFTRUN;
 		move({-1.f,0.f});
 	}
+
 	else
 	{
 		mainCharacterState = IDLE;
@@ -147,10 +149,29 @@ void MainCharacter::Update(const float& deltaTime)
 
 void MainCharacter::Jump()
 {
+	if(--jumpCount > 0)
+	{
+		velocity.y = 20.f;
+	}
 }
 
 void MainCharacter::MoveUpdate(const float& deltaTime)
 {
+	if(position.y < 500.f - 30.f)
+	{
+		velocity.y += gravity * speed * deltaTime;
+	}
+	else if(position.y > 500)
+	{
+		position.y = 500;
+	}
+	
+	velocity += acceleration * speed * deltaTime;
+
+	position += velocity;
+
+	setPosition(position);
+
 }
 
 void MainCharacter::SetState(const int& state)

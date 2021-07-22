@@ -33,13 +33,18 @@ private:
 	vector<Texture*> leftRunAnimation;
 	vector<Texture*> rightRunAnimation;
 
-	int state = IDLE;
+	Vector2f position{200.f, 0.f};
+	Vector2f velocity{0.f,0.f};
+	Vector2f acceleration{0.f,0.f};
 
 	map<int, vector<Texture*>*> stateAnimation;
 	float frameTime = 0.1f;
 	unsigned int keyFrame = 0;
 	float speed = 15.f;
+	float gravity = 2.f;
+	int jumpCount = 2;
 
+	int state = IDLE;
 	int oldState = IDLE;
 	int mainCharacterState = IDLE;
 
