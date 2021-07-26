@@ -58,7 +58,7 @@ void MainCharacter::Init()
 
 	for(int i = 1; i < 7; ++i)
 	{
-		sprintf(filePath, "naruto_jump_0%d.png",i);
+		sprintf(filePath, "Textures/Naruto/narutomoving/naruto_jump_0%d.png",i);
 		tx = new Texture;
 		tx->loadFromFile(filePath);
 		this->jumpAnimation.push_back(tx);
@@ -101,6 +101,7 @@ void MainCharacter::Update(const float& deltaTime)
 
 	static float elapsedTime = 0.f;
 	elapsedTime += deltaTime;
+	MoveUpdate(deltaTime);
 
 	if(Keyboard::isKeyPressed(Keyboard::Up))
 	{
@@ -118,13 +119,13 @@ void MainCharacter::Update(const float& deltaTime)
 	else if(Keyboard::isKeyPressed(Keyboard::Right))
 	{
 		mainCharacterState = RIGHTRUN;
-		move({1.f,0.f});
+		position += {2.f,0.f};
 	}
 
 	else if(Keyboard::isKeyPressed(Keyboard::Left))
 	{
 		mainCharacterState = LEFTRUN;
-		move({-1.f,0.f});
+		position -= {2.f,0.f};
 	}
 
 	else
@@ -149,15 +150,16 @@ void MainCharacter::Update(const float& deltaTime)
 
 void MainCharacter::Jump()
 {
-	if(--jumpCount > 0)
-	{
-		velocity.y = 20.f;
-	}
+	//if(--jumpCount > 0)
+	//{
+		velocity.y = -10.f;
+
+	//}
 }
 
 void MainCharacter::MoveUpdate(const float& deltaTime)
 {
-	if(position.y < 500.f - 30.f)
+	if(position.y < 500.f )
 	{
 		velocity.y += gravity * speed * deltaTime;
 	}
