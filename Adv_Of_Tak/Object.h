@@ -2,17 +2,40 @@
 class Object : public Sprite
 {
 public:
-	Object() = default;
-	virtual ~Object();
+	Object();
+	Object(const string& texttureFilePath);
+	Object(const string& textureFilePath, const Vector2f& position);
+	virtual ~Object() = default;
+
+protected:
+
+	bool isActive = true;
 
 private:
+
+	Texture* texture = nullptr;
+
+	Vertex* vertices = nullptr;
+	Color boxColor = Color::Red;
+	bool debugBox = true;
 
 	virtual void Init() = 0;
 
 public:
 
 	
-	virtual void Destroy() = 0;
-	virtual void Update(const float& deltaTime) = 0;
-};
+	virtual void Destroy();
 
+	void SetDebugBoxActive(bool isActive);
+	void SetActive(bool isActive);
+	bool IsActive();
+
+	void SetBoxColor(const Color& color);
+	void SetBoxColor(const Uint8& r, const Uint8& g, const Uint8& b, const Uint8& a);
+
+
+	virtual void Update(const float& deltaTime);
+	virtual void Update(const Vector2f& mousePosition);
+
+	virtual void Render(RenderTarget* target);
+};

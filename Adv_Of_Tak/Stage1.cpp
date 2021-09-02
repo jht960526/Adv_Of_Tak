@@ -16,6 +16,7 @@ Stage1::Stage1(stack<Scene*>* scense, RenderWindow* window) : Scene(scense,windo
 
 Stage1::~Stage1()
 {
+
 }
 
 void Stage1::Init()
@@ -29,6 +30,8 @@ void Stage1::Init()
 void Stage1::Update(const float& deltaTime)
 {
 	Scene::Update(deltaTime);
+
+	
 }
 
 void Stage1::Render(RenderWindow* window)

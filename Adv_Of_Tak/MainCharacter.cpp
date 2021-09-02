@@ -1,5 +1,7 @@
 #include "framework.h"
 #include "MainCharacter.h"
+#include "SkillObject.h"
+
 
 MainCharacter::MainCharacter()
 {
@@ -13,7 +15,8 @@ MainCharacter::~MainCharacter()
 void MainCharacter::Init()
 {
 	Texture* tx = nullptr;
-	
+	//naSun = new SkillObject("");
+
 	char filePath[100];
 
 	for(int i = 1; i < 5; ++i)
@@ -119,14 +122,28 @@ void MainCharacter::Update(const float& deltaTime)
 	else if(Keyboard::isKeyPressed(Keyboard::Right))
 	{
 		mainCharacterState = RIGHTRUN;
-		position += {2.f,0.f};
+		position += {1.f,0.f};
 	}
 
 	else if(Keyboard::isKeyPressed(Keyboard::Left))
 	{
 		mainCharacterState = LEFTRUN;
-		position -= {2.f,0.f};
+		position -= {1.f,0.f};
 	}
+
+	else if(Keyboard::isKeyPressed(Keyboard::Z))
+	{
+
+	}
+
+	//if(shootTimer < 3)
+	//	shootTimer++;
+
+	//else if(Keyboard::isKeyPressed(Keyboard::X) && shootTimer >= 3)
+	//{
+	//	shootTimer = 0;
+	//	//projectiles.setposition(playerCenter);
+	//}
 
 	else
 	{
@@ -152,7 +169,7 @@ void MainCharacter::Jump()
 {
 	//if(--jumpCount > 0)
 	//{
-		velocity.y = -10.f;
+		velocity.y = -5.f;
 
 	//}
 }

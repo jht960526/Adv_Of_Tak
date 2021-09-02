@@ -7,6 +7,7 @@ public:
 	Stage1(stack<Scene*>* scense, RenderWindow* window);
 	virtual ~Stage1();
 
+
 private:
 	virtual void Init();
 

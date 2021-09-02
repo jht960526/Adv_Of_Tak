@@ -52,6 +52,12 @@
     <Filter Include="소스 파일\01_Object\04_BackGroundObject">
       <UniqueIdentifier>{ab1eed77-aae2-4c04-ad2d-32cbfcaf47cb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Skill">
+      <UniqueIdentifier>{c6c2ef60-b9c8-402e-abca-4316a636e65e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Scene\Title">
+      <UniqueIdentifier>{e1413d68-cb4e-4014-9aba-6030cf315b22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -84,11 +90,14 @@
     <ClCompile Include="Stage2.cpp">
       <Filter>소스 파일\Scene\Stage\Stage2</Filter>
     </ClCompile>
-    <ClCompile Include="Title.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="BackGroundObject.cpp">
       <Filter>소스 파일\01_Object\04_BackGroundObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillObject.cpp">
+      <Filter>소스 파일\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>소스 파일\Scene\Title</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,11 +131,14 @@
     <ClInclude Include="Stage2.h">
       <Filter>소스 파일\Scene\Stage\Stage2</Filter>
     </ClInclude>
-    <ClInclude Include="Title.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="BackGroundObject.h">
       <Filter>소스 파일\01_Object\04_BackGroundObject</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillObject.h">
+      <Filter>소스 파일\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>소스 파일\Scene\Title</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

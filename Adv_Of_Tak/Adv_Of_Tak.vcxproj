@@ -151,6 +151,7 @@
     <ClCompile Include="ProfObject1.cpp" />
     <ClCompile Include="ProfObject2.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SkillObject.cpp" />
     <ClCompile Include="Stage1.cpp" />
     <ClCompile Include="Stage2.cpp" />
     <ClCompile Include="Title.cpp" />
@@ -165,6 +166,7 @@
     <ClInclude Include="ProfObject1.h" />
     <ClInclude Include="ProfObject2.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SkillObject.h" />
     <ClInclude Include="Stage1.h" />
     <ClInclude Include="Stage2.h" />
     <ClInclude Include="Title.h" />
